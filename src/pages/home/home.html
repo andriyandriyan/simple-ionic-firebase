@@ -1,0 +1,14 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Framework List
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-item *ngFor="let framework of frameworks | async" (click)="showOptions(framework.key, framework.name)">{{ framework.name }}</ion-item>  <!--Perubahan -->
+    <ion-fab bottom right>
+        <button ion-fab (click)="add()"><ion-icon name="add"></ion-icon></button>
+    </ion-fab>
+</ion-content>
